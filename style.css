@@ -32,7 +32,7 @@ h2 {
 li {
     list-style-type: none;
 }
-li a {
+a {
     color: white;
     text-decoration: none;
     /* font-family: sriracha; */
@@ -91,11 +91,22 @@ section:nth-child(2) {
 section:nth-child(3) {
     background-color: #1d1d1d;
 }
+section:nth-child(3) article,
 section:nth-child(2) article {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 100%;
+}
+section:nth-child(3) article img {
+    width: 50%;    
+    align-self: center;
+    margin: 4vh 0 4vh 0;
+}
+section:nth-child(3) article p {
+    text-align: center;
+    align-self: center;
+    color: #ffffff;
 }
 section:nth-child(2) article p {
     color: #113a01;
@@ -115,9 +126,11 @@ section:nth-child(2) article h6 {
 section:nth-child(2) article h6:after {
     content: "→";
     font-family: sriracha;
+    margin-right: 2vw;
 }
 
 /* Page Carte */
+
 .la_carte {
     display: flex;
     flex-direction: column;
