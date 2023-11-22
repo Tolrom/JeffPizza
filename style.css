@@ -32,7 +32,7 @@ h2 {
 li {
     list-style-type: none;
 }
-a {
+li a {
     color: white;
     text-decoration: none;
     /* font-family: sriracha; */
@@ -79,9 +79,13 @@ header img {
 }
 section:first-child {
     height: 40vh;
-    background-image: url(./images/margarita.png);
     background-size: cover;
     background-position: center;
+}
+section:first-child article,
+.carousel,
+.slides {
+    height: 100%;
 }
 section:nth-child(2) {
     height: 40vh;
@@ -91,22 +95,11 @@ section:nth-child(2) {
 section:nth-child(3) {
     background-color: #1d1d1d;
 }
-section:nth-child(3) article,
 section:nth-child(2) article {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 100%;
-}
-section:nth-child(3) article img {
-    width: 50%;    
-    align-self: center;
-    margin: 4vh 0 4vh 0;
-}
-section:nth-child(3) article p {
-    text-align: center;
-    align-self: center;
-    color: #ffffff;
 }
 section:nth-child(2) article p {
     color: #113a01;
@@ -126,10 +119,127 @@ section:nth-child(2) article h6 {
 section:nth-child(2) article h6:after {
     content: "→";
     font-family: sriracha;
-    margin-right: 2vw;
 }
 
+/* Carrousel */
+
+ul.slides {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: hidden;
+    list-style: none;
+}
+
+ul.slides input {
+    display: none; 
+}
+
+.slide-container { 
+    display: block; 
+}
+
+.slide-image {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}   
+
+.slide-image img {
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    font-size: 100px;
+    line-height: 30vw;
+    color: #fff;
+}
+
+.carousel-controls label {
+    display: none;
+    position: absolute;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    opacity: 0;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label{
+    opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+    opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+    width: 49%;
+    text-align: left;
+    left: 0;
+}
+
+.carousel-controls .next-slide {
+    width: 49%;
+    text-align: right;
+    right: 0;
+}
+
+.carousel-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 999;
+    text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+    display: inline-block;
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    margin: 1vw;
+}
+
+input:checked + .slide-container .slide-image {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+     display: block; 
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+	opacity: 1;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
 /* Page Carte et Pizzas*/
+
 .la_carte {
     display: flex;
     flex-direction: column;
@@ -155,31 +265,24 @@ section:nth-child(2) article h6:after {
 .menu {
     background-image: url(images/pizza\ menu\ 1.svg);
 }
-
 .pizza {
     background-image: url(images/pizza-au-chevre-et-au-miel\ 1.svg);
 }
-
 .entrees {
     background-image: url(images/bruce-keita\ 1.svg);
 }
-
 .boissons {
     background-image: url(images/boissons\ 1.svg);
 }
-
 .desserts {
     background-image: url(images/desserts.png);
 }
-
 .marguerite {
     background-image: url(images/margarita.png);
 }
-
 .reine{
     background-image: url(images/reina.png);
 }
-
 .chevre{
     background-image: url(images/chevremiel.png);
 }
@@ -197,6 +300,9 @@ section:nth-child(2) article h6:after {
 }
 .cho{
     background-image: url(images/cho.png);
+}
+.custom{
+    background-image: url(images/pizzacustom.jpg);
 }
 
 
