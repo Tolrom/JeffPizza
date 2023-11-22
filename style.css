@@ -32,7 +32,7 @@ h2 {
 li {
     list-style-type: none;
 }
-li a {
+a {
     color: white;
     text-decoration: none;
     /* font-family: sriracha; */
