@@ -117,20 +117,12 @@ section:nth-child(2) article h6:after {
     font-family: sriracha;
 }
 
-/* Page Carte */
+/* Page Carte et Pizzas*/
 .la_carte {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-/*
-.picture_link{
-    z-index: 1;
-}
-.category_name{
-    position:absolute;
-    z-index: 2;
-}*/
 
 #category {
     display : flex ;
@@ -167,4 +159,32 @@ section:nth-child(2) article h6:after {
 .desserts {
     background-image: url(images/desserts.png);
 }
+
+.marguerite {
+    background-image: url(images/margarita.png);
+}
+
+.reine{
+    background-image: url(images/reina.png);
+}
+
+.chevre{
+    background-image: url(images/chevremiel.png);
+}
+.orientale{
+    background-image: url(images/orientale.png);
+}
+.toscane{
+    background-image: url(images/toscane.png);
+}
+.montagnarde{
+    background-image: url(images/montagnarde.png);
+}
+.norvegienne{
+    background-image: url(images/norvégienne.png);
+}
+.cho{
+    background-image: url(images/cho.png);
+}
+
 
