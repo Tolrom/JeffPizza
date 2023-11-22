@@ -88,3 +88,55 @@ section:nth-child(2) {
 section:nth-child(3) {
     background-color: #1d1d1d;
 }
+
+/* Page Carte */
+.la_carte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*
+.picture_link{
+    z-index: 1;
+}
+.category_name{
+    position:absolute;
+    z-index: 2;
+}*/
+
+#category {
+    display : flex ;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    background-color: #000000;
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    width: 70vw;
+    height: 50vw;
+    margin-bottom: 8vw;
+    font-size: 4vw;
+    font-family: sriracha;
+    padding-right: 1vw;
+}
+
+.menu {
+    background-image: url(images/pizza\ menu\ 1.svg);
+}
+
+.pizza {
+    background-image: url(images/pizza-au-chevre-et-au-miel\ 1.svg);
+}
+
+.entrees {
+    background-image: url(images/bruce-keita\ 1.svg);
+}
+
+.boissons {
+    background-image: url(images/boissons\ 1.svg);
+}
+
+.desserts {
+    background-image: url(images/desserts.png);
+}
+
