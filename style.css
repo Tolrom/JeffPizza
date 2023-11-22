@@ -186,5 +186,8 @@ section:nth-child(2) article h6:after {
 .cho{
     background-image: url(images/cho.png);
 }
+.custom{
+    background-image: url(images/pizzacustom.jpg);
+}
 
 
