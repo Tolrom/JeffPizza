@@ -38,13 +38,21 @@ a {
     /* font-family: sriracha; */
 }
 nav {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
     width: 60vw;
     background-color: #113a01;
-    display: none;
+    z-index: 1000;
+    transition: transform 0.5s ease-in-out;
+    /* display: none; */
+}
+#croixNav {
+    align-self: flex-end;
+    margin: 4vw 4vw 0 0;
 }
 nav ul {
     height: 100vh;
@@ -59,7 +67,7 @@ header {
     height: 10vh;
     align-items: center;
     justify-content: space-between;
-    padding: 0 40vw 0 5vw;
+    padding: 0 38vw 0 5vw;
 }
 footer {
     display: flex;
@@ -75,7 +83,7 @@ footer ul {
     justify-content: space-between;
 }
 header img {
-    height: 5vh;
+    height: 7vh;
 }
 section:first-child {
     height: 40vh;
