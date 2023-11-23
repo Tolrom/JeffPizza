@@ -93,7 +93,10 @@ section:nth-child(2) {
     background-size: cover;
 }
 section:nth-child(3) {
-    background-color: #1d1d1d;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.7);
+    color: #000000;
 }
 section:nth-child(2) article {
     display: flex;
@@ -121,6 +124,11 @@ section:nth-child(2) article h6:after {
     font-family: sriracha;
 }
 
+iframe {
+    margin-top: 3vw;
+    margin-bottom: 5vw;
+    align-items: center;
+}
 /* Carrousel */
 
 ul.slides {
@@ -203,7 +211,7 @@ ul.slides input {
     left: 0;
     right: 0;
     bottom: 20px;
-    z-index: 999;
+    z-index: 800;
     text-align: center;
 }
 
